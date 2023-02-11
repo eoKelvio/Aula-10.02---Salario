@@ -1,0 +1,82 @@
+body {
+    color: white;
+    background-color: black;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e35d8d33-b328-4a99-abc6-72115f6ba1c6/de894ev-532ae2c5-fd3d-453c-9213-a43c59bc18f1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UzNWQ4ZDMzLWIzMjgtNGE5OS1hYmM2LTcyMTE1ZjZiYTFjNlwvZGU4OTRldi01MzJhZTJjNS1mZDNkLTQ1M2MtOTIxMy1hNDNjNTliYzE4ZjEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2bgrWL3LmxV-9v0dsa817XZohj-nN5HKXAY-nfTkU-c);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: -10%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+
+    background-color: rgba(32, 13, 152, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(35, 0, 190, 0.0);
+}
+
+#blocoDeCal {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.ladoEsquerdo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+    width: 300px;
+    margin-top: 100px;
+    margin-bottom: auto;
+    border-radius: 2%;
+}
+
+.Botao {
+    background-color: yellow;
+    text-align: center;
+    border-radius: 10%;
+
+
+}
+
+.Check {
+    display: flex;
+}
+
+.ladoDireito {
+    align-items: center;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 120px;
+    margin-bottom: auto;
+    border-radius: 2%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(32, 13, 152, 0.3);
+    padding: 10px;
+    bottom: 0px;
+}
