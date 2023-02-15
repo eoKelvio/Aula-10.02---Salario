@@ -1,40 +1,74 @@
-var sala = document.getElementById('sala')
-var dpnt = document.getElementById('dpnt')
-var vale = document.getElementById('vale')
-var inss
-var irrf
-var final
+var element = document.getElementById("botao");
+element.addEventListener("click", calcular);
+
+
+
 
 
 function calcular() {
-    switch (true) {
-        case sala <= 1903:
-            irrf_res = 0
-            break;
-        case sala > 1903 && 2826:
 
-
-    }
-
-
+    var final
+    var irrf_res
+    var irrf
+    sala = Number(document.getElementById('sala').value)
+    dpnt = Number(document.getElementById('dpnt').value)
+    vale = document.getElementById('vale')
 
 
     switch (true) {
         case sala <= 1212:
-            var final = sala - (sala * 0.075) - (sala * 0.06)
+            var inss = sala * 0.06
             break;
         case sala > 1212 && sala <= 2427:
-            inss = sala * 0.09
-            vale = sala * 0.06
-            var final = sala - (inss) - (vale) - (irrf_res) - (dpnt * 189, 59)
+            var inss = sala * 0.09
             break;
         case sala > 2427 && sala <= 3641:
-            var inss = (sala * 0.12) - (sala * 0.06) - (irrf_res) - (dpnt * 189, 59)
+            var inss = sala * 0.12
             break;
         case sala > 3641 && sala <= 7087:
-            var inss = (sala * 0.14) - (sala * 0.06) - (irrf_res) - (dpnt * 189, 59)
-            break
+            var inss = sala * 0.14
+            break;
+        case sala > 7087:
+            var inss = 7087 * 0.14
+            break;
     }
+
+
+
+    if (vale.checked) {
+        vale = sala * 0.06
+    }
+
+    else {
+        vale = 0
+    }
+
+    var irrf_res = sala-(inss+189.59*dpnt) 
+    switch (true) {
+
+        case irrf_res <= 1903:
+            var irrf = 0
+            break;
+        case irrf_res > 1903 && irrf_res <= 2826: 
+            var irrf = (irrf_res*0.075)-142.80 
+            break;
+        case irrf_res > 2826 && irrf_res <= 3751: 
+            var irrf = (irrf_res*0.15)-354.80
+            break;
+        case irrf_res > 3751 && irrf_res <= 4664:
+            var irrf = (irrf_res*0.225)-636.13
+            break;
+        case irrf_res > 4664:   
+            var irrf = (irrf_res*0.275)-869.36
+            break;
+    }
+
+    var final = sala - inss - vale - irrf
+    document.getElementById("sb").innerHTML = sala.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    document.getElementById("in").innerHTML = inss.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    document.getElementById("ir").innerHTML = irrf.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    document.getElementById("vt").innerHTML = vale.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    document.getElementById("sl").innerHTML = final.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 
 }
 
