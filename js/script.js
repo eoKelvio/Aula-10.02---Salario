@@ -1,8 +1,21 @@
 var element = document.getElementById("botao");
 element.addEventListener("click", calcular);
 
+var reset = document.getElementById("resetar")
+reset.addEventListener("click", limpa_entradas)
 
 
+function limpa_entradas(){
+    var sala = document.getElementById("sala")
+    sala.value = ""
+    var dpnt = document.getElementById("dpnt")
+    dpnt.value = ""
+    document.getElementById("sb").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"
+    document.getElementById("in").innerHTML = ""
+    document.getElementById("ir").innerHTML = ""
+    document.getElementById("vt").innerHTML = ""
+    document.getElementById("sl").innerHTML = ""
+}
 
 
 function calcular() {
